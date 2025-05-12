@@ -1,7 +1,7 @@
 
 #  Analysis of Patient Record Project Using SQL
 
-This project showcases how SQL can be applied to analyze biostatistics data, particularly focusing on patient demographics, diagnosis patterns, treatment outcomes, and hospital utilization.
+This project showcases how SQL can be applied to analyze health data, particularly focusing on patient demographics, diagnosis patterns, treatment outcomes, and hospital utilization.
 
 ---
 
