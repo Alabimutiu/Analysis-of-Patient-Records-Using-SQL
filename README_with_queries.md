@@ -33,7 +33,7 @@ The dataset includes patient records with the following columns:
 
 ## 🧠 SQL Analyses Performed
 
-The project includes 15 SQL queries, such as:
+The project includes 17 SQL queries, such as:
 
 1. Total number of patients  
 2. Gender-based distribution  
