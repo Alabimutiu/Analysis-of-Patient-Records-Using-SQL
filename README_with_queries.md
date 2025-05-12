@@ -215,14 +215,14 @@ This project offers a practical demonstration of using SQL to explore and analyz
 - Regional healthcare planning  
 - Patient risk profiling  
 
-The project serves as a valuable portfolio piece for aspiring data analysts, particularly those interested in public health or biostatistics.
+The project serves as a valuable portfolio piece for aspiring data analysts, particularly those interested in public health data.
 
 ---
 
 ## 💾 How to Use
 
 1. Import the dataset (`Patient Record.csv`) into a SQL environment like **SQLite**, **PostgreSQL**, or **MySQL**.
-2. Run the SQL queries in `biostatistics_sql_queries.sql`.
+2. Run the SQL queries in `sql_queries_ for _patient_ records.sql`.
 3. Review and interpret the results. Optionally, visualize them using Power BI, Tableau, or Excel.
 
 ---
@@ -235,6 +235,6 @@ The project serves as a valuable portfolio piece for aspiring data analysts, par
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻 Author--Mutiu Sulaimon
 
-*This project is part of my data analytics portfolio, showcasing SQL skills relevant to biostatistics and public health data analysis.*
+*This project is part of my data analytics portfolio, showcasing SQL skills relevant to public health data analysis.*
