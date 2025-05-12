@@ -238,3 +238,9 @@ The project serves as a valuable portfolio piece for aspiring data analysts, par
 ## 👨‍💻 Author--Mutiu Sulaimon
 
 *This project is part of my data analytics portfolio, showcasing SQL skills relevant to public health data analysis.*
+
+### Connect with me
+- **LinkedIn**: [Connect with me professionally](https://www.linkedin.com/in/mutiu-sulaimon-7b604367/)
+
+Thank you for your support, and I look forward to connecting with you!
+
