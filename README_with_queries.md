@@ -229,8 +229,8 @@ The project serves as a valuable portfolio piece for aspiring data analysts, par
 
 ## 📂 Project Files
 
-- `Patient Record.csv` — Biostatistics dataset  
-- `biostatistics_sql_queries.sql` — 17 SQL queries  
+- `Patient Record.csv` —  Dataset  
+- `sql_queries_ for _patient_ records.sql` — 17 SQL queries  
 - `README.md` — Documentation
 
 ---
