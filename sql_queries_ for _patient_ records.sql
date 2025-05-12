@@ -40,18 +40,18 @@
   SELECT COUNT(* )
   FROM Patient_Records
 
-  ---Write query to retrieve total number of patients
+  ---1.Write query to retrieve total number of patients
   
   SELECT COUNT(*) AS TotalPatients 
   FROM Patient_Records;
 
-  --- Write a query to retrieve number of patients by gender.
+  ---2- Write a query to retrieve number of patients by gender.
 
   SELECT Gender, COUNT(*) AS PatientCount
   FROM Patient_Records
   GROUP BY Gender;
 
---- Write a query to retrieve age distribution of patients.
+--- 3.Write a query to retrieve age distribution of patients.
   SELECT 
   CASE
     WHEN Age < 18 THEN 'Under 18'
@@ -63,19 +63,19 @@
 FROM Patient_Records
 GROUP BY AgeGroup;
 
---- Write a query to retrieve number of patients by diagnosis.
+---4. Write a query to retrieve number of patients by diagnosis.
     SELECT Diagnosis, COUNT(*) AS DiagnosisCount
     FROM Patient_Records
     GROUP BY Diagnosis
     ORDER BY DiagnosisCount DESC;
 
---- Write a query to retrieve average hospital stay by diagnosis.	
+--- 5.Write a query to retrieve average hospital stay by diagnosis.	
 	SELECT Diagnosis, ROUND(AVG(Hospital_Stay_Days),2) AS AvgStayDays
     FROM Patient_Records
     GROUP BY Diagnosis
     ORDER BY AvgStayDays DESC;
 
-----Mortality rate by diagnosis
+--- 6.Mortality rate by diagnosis
 	SELECT 
 	  Diagnosis,
 	  ROUND(SUM(CASE WHEN TreatmentOutcome = 'Deceased' THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2) AS MortalityRate
@@ -83,37 +83,67 @@ GROUP BY AgeGroup;
 	GROUP BY Diagnosis
 	ORDER BY MortalityRate DESC;
 
----Recorvery rate by region
+--- 7.Gender distribution by diagnosis
+   SELECT Diagnosis, Gender, COUNT(*) AS Count 
+   FROM Patient_Records 
+   GROUP BY Diagnosis, Gender ORDER BY Diagnosis;
+
+ --- 8.Average age by diagnosis
+	 SELECT Diagnosis, ROUND(AVG(Age),2) AS AvgAge 
+	 FROM Patient_Records 
+	 GROUP BY Diagnosis 
+	 ORDER BY AvgAge DESC;
+
+--- 9.Recorvery rate by region
 	  SELECT 
 	  Region,
 	  ROUND(SUM(CASE WHEN TreatmentOutcome = 'Recovered' THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2) AS RecoveryRate
 	  FROM Patient_Records
 	  GROUP BY Region;
 
-----Top 5 oldest patient admitted	  
-	  SELECT *
-	  FROM Patient_Records
-      ORDER BY Age DESC
-      LIMIT 5;
+--- 10. Write query to retrieve top 5 records of patient who stay long in the hospital
+		SELECT *
+		FROM Patient_Records
+		ORDER BY Hospital_Stay_Days DESC
+		LIMIT 5;
 
---- Write query to retrieve top 5 records of patient who stay long in the hospital
-	SELECT *
-	FROM Patient_Records
-	ORDER BY Hospital_Stay_Days DESC
-	LIMIT 5;
+--- 11.Number of admission by region
+       SELECT Region, COUNT(*) AS Count 
+	   FROM Patient_Records GROUP BY Region;
 
----Treatment outcome breakdown
+--- 12.Treatment outcome breakdown
    SELECT TreatmentOutcome, COUNT(*) AS Count
    FROM Patient_Records
    GROUP BY TreatmentOutcome;
 
-
-----Gender distribution by diagnosis
-
-	SELECT Diagnosis, Gender, COUNT(*) AS Count
+--- 13. Top 3 most diagnosis by region
+	SELECT Region, Diagnosis, COUNT(*) AS Count
 	FROM Patient_Records
-	GROUP BY Diagnosis, Gender
-	ORDER BY Diagnosis, Count DESC;
+	GROUP BY Region, Diagnosis
+	ORDER BY Region, Count DESC;
+
+--- 14. Diagnosis trend by age group
+	SELECT 
+	  CASE 
+	    WHEN Age BETWEEN 0 AND 18 THEN '0-18'
+	    WHEN Age BETWEEN 19 AND 35 THEN '19-35'
+	    WHEN Age BETWEEN 36 AND 60 THEN '36-60'
+	    ELSE '60+' 
+	  END AS AgeGroup,
+	  Diagnosis,
+	  COUNT(*) AS Count
+	FROM Patient_Records
+	GROUP BY AgeGroup, Diagnosis
+	ORDER BY AgeGroup;
+
+--- 15. Percentage of each treatment outcome
+	SELECT 
+	  TreatmentOutcome,
+	  ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM Patient_Records), 2) AS Percentage
+	FROM Patient_Records
+	GROUP BY TreatmentOutcome;
+
+
 
 ---Average age by region
    SELECT Region, ROUND(AVG(Age), 1) AS AvgAge
