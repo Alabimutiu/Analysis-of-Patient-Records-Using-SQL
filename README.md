@@ -7,7 +7,7 @@ This project showcases how SQL can be applied to analyze health data, particular
 
 ## 🎯 Objective
 
-The goal of this project is to demonstrate core SQL skills by analyzing a clinical dataset. The analysis aims to:
+The goal of this project is to demonstrate core SQL skills by analyzing a health dataset. The analysis aims to:
 
 - Understand patient demographic distributions
 - Identify patterns in diagnoses and treatment outcomes
