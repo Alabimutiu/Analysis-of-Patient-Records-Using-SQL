@@ -1,5 +1,5 @@
 
-# Biostatistics SQL Analysis Project
+#  Analysis of Patient Record Project Using SQL
 
 This project showcases how SQL can be applied to analyze biostatistics data, particularly focusing on patient demographics, diagnosis patterns, treatment outcomes, and hospital utilization.
 
@@ -43,56 +43,10 @@ The project includes 17 SQL queries, such as:
 6. Mortality and recovery rates  
 7. Admissions by month  
 8. Diagnosis trends by region and gender  
-9. Top spending patients and longest hospital stays  
-
-See all queries in the [`biostatistics_sql_queries.sql`](./biostatistics_sql_queries.sql) file.
+9. Top spending patients and longest hospital stays  etc
 
 ---
 
-## 🔍 Insights
-
-Key findings from the analysis:
-
-- **Demographics**: Patients are distributed across all age groups, with a balanced gender ratio.
-- **Common Diagnoses**: Conditions like Diabetes and Hypertension are among the most reported.
-- **Outcomes**: The majority of patients recovered, but a few diagnoses show higher mortality rates.
-- **Hospitalization Trends**: Longer stays are associated with chronic illnesses; admissions vary by month.
-- **Regional Differences**: Recovery rates and diagnosis prevalence vary by geographic region.
-
----
-
-## ✅ Conclusion
-
-This project offers a practical demonstration of using SQL to explore and analyze healthcare datasets. It provides insights that can guide:
-
-- Resource allocation  
-- Preventive care strategies  
-- Regional healthcare planning  
-- Patient risk profiling  
-
-The project serves as a valuable portfolio piece for aspiring data analysts, particularly those interested in public health or biostatistics.
-
----
-
-## 💾 How to Use
-
-1. Import the dataset (`Patient Record.csv`) into a SQL environment like **SQLite**, **PostgreSQL**, or **MySQL**.
-2. Run the SQL queries in `biostatistics_sql_queries.sql`.
-3. Review and interpret the results. Optionally, visualize them using Power BI, Tableau, or Excel.
-
----
-
-## 📂 Project Files
-
-- `Patient Record.csv` — Biostatistics dataset  
-- `biostatistics_sql_queries.sql` — 15 SQL queries  
-- `README.md` — Documentation
-
----
-
-## 👨‍💻 Author
-
-*This project is part of my data analytics portfolio, showcasing SQL skills relevant to biostatistics and public health data analysis.*
 
 
 ## 📊 SQL Queries Used
@@ -240,3 +194,47 @@ SELECT Gender, Diagnosis, COUNT(*) AS Count
    GROUP BY Gender, Diagnosis
    ORDER BY Gender, Count DESC;
 ```
+## 🔍 Insights
+
+Key findings from the analysis:
+
+- **Demographics**: Patients are distributed across all age groups, with a balanced gender ratio.
+- **Common Diagnoses**: Conditions like Diabetes and Hypertension are among the most reported.
+- **Outcomes**: The majority of patients recovered, but a few diagnoses show higher mortality rates.
+- **Hospitalization Trends**: Longer stays are associated with chronic illnesses; admissions vary by month.
+- **Regional Differences**: Recovery rates and diagnosis prevalence vary by geographic region.
+
+---
+
+## ✅ Conclusion
+
+This project offers a practical demonstration of using SQL to explore and analyze healthcare datasets. It provides insights that can guide:
+
+- Resource allocation  
+- Preventive care strategies  
+- Regional healthcare planning  
+- Patient risk profiling  
+
+The project serves as a valuable portfolio piece for aspiring data analysts, particularly those interested in public health or biostatistics.
+
+---
+
+## 💾 How to Use
+
+1. Import the dataset (`Patient Record.csv`) into a SQL environment like **SQLite**, **PostgreSQL**, or **MySQL**.
+2. Run the SQL queries in `biostatistics_sql_queries.sql`.
+3. Review and interpret the results. Optionally, visualize them using Power BI, Tableau, or Excel.
+
+---
+
+## 📂 Project Files
+
+- `Patient Record.csv` — Biostatistics dataset  
+- `biostatistics_sql_queries.sql` — 15 SQL queries  
+- `README.md` — Documentation
+
+---
+
+## 👨‍💻 Author
+
+*This project is part of my data analytics portfolio, showcasing SQL skills relevant to biostatistics and public health data analysis.*
